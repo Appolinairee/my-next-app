@@ -1,0 +1,19 @@
+.btn-base {
+    @apply relative rounded-full w-full font-medium tracking-wide cursor-pointer inline-flex gap-2 items-center !justify-center outline-none focus-visible:ring-2 focus:scale-[0.98] disabled:cursor-not-allowed px-4 xs:px-8 py-2 xs:py-3 text-base flex-nowrap whitespace-nowrap;
+}
+
+.primary-btn {
+    @apply bg-primary text-white disabled:bg-primary whitespace-nowrap !font-medium focus:ring-2 focus:ring-primary focus:ring-offset-2 z-0;
+}
+
+.border-btn {
+    @apply border-solid border-[.5px] bg-white border-gray-300 focus:border-none focus:ring-2 focus:ring-primary focus:ring-offset-1;
+}
+
+.danger-btn {
+    @apply bg-red-500 text-white hover:bg-red-600;
+}
+
+.plus-btn {
+    @apply bg-gray-200 px-1 py-[2px] rounded focus:outline-none ml-1 inline cursor-pointer font-medium text-sm;
+}

@@ -1,0 +1,11 @@
+.input {
+    @apply border-solid border-gray-200 border-[.5px] w-full px-3 py-[11px] rounded-full text-[14px] focus:ring-1 focus:ring-primary focus:border-transparent focus:outline-none focus:ring-offset-1 bg-white;
+}
+
+.input-error {
+    @apply  !border-red-500 focus:ring-0;
+}
+
+.input-error-message {
+    @apply text-red-500 text-[15px] text-ellipsis line-clamp-2 sm:text-[14px];
+}
