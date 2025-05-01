@@ -52,8 +52,18 @@ const CryptoTableRow = ({ item }: { item: any }) => {
         <p>{item.max_supply ? item.max_supply.toLocaleString() : "—"}</p>
       </td>
 
-      <td>
-        <p className="whitespace-nowrap">{new Date(item.last_updated).toLocaleString()}</p>
+      <td className="whitespace-nowrap">
+        <p>
+          {new Date(item.last_updated)
+            .toLocaleString("fr-FR", {
+              month: "short",
+              day: "numeric",
+              hour: "2-digit",
+              minute: "2-digit",
+              second: "2-digit",
+            })
+            .replace(",", " à")}
+        </p>
       </td>
     </tr>
   );

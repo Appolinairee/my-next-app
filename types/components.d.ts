@@ -35,3 +35,21 @@ type TableProps<T> = {
   columns: string[];
   RowComponent: React.FC<{ item: T }>;
 };
+
+type PageTitle = {
+  title: string;
+  icon?: React.ReactNode;
+  setState?: SetStateType;
+  titleClass?: string;
+  count?: number;
+  className?: string;
+};
+
+interface SearchBarProps {
+  onSearch: (value: string) => void;
+  placeholder?: string;
+  initialValue?: string;
+  className?: string;
+  inputClassName?: string;
+  buttonClassName?: string;
+}

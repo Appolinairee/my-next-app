@@ -90,7 +90,7 @@ const SelectField = forwardRef<HTMLDivElement, SelectFieldProps>(
         >
           <button
             type="button"
-            className={`${inputClass} btn-base border-btn !justify-between !font-normal !px-4`}
+            className={`${inputClass} btn-base border-btn !justify-between !font-normal !px-4 focus:!outline-none focus:!ring-1 !border-gray-200`}
             onClick={handleButtonClick}
           >
             <span>

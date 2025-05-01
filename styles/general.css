@@ -35,14 +35,10 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.07);
 }
 
-.table-row {
-    @apply border-solid border-0 border-b-[1px] border-b-black/10 *:bg-white *:py-3  *:px-3 *:my-2 *:first:!border-y-0  sm:*:py-2;
-}
-
 .ellipsis {
     @apply text-ellipsis !overflow-hidden whitespace-nowrap;
 }
 
 .table-row {
-    @apply border-solid border-0 border-b-[1px] border-b-black/10 *:bg-white *:py-3  *:px-3 *:my-2 *:first:!border-y-0  sm:*:py-2;
+    @apply border-solid border-0 border-b-[1px] border-b-black/10 *:bg-white *:py-2  *:px-2 *:my-2 *:first:!border-y-0  sm:*:py-3;
   }

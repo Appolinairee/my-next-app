@@ -1,5 +1,5 @@
 .btn-base {
-    @apply relative rounded-full w-full font-medium tracking-wide cursor-pointer inline-flex gap-2 items-center !justify-center outline-none focus-visible:ring-2 focus:scale-[0.98] disabled:cursor-not-allowed px-4 xs:px-8 py-2 xs:py-3 text-base flex-nowrap whitespace-nowrap;
+    @apply relative rounded-full w-full font-medium tracking-wide cursor-pointer inline-flex gap-2 items-center !justify-center outline-none focus-visible:ring-2 disabled:cursor-not-allowed px-4 py-[8px] xs:px-8 xs:py-3 text-base  flex-nowrap whitespace-nowrap max-h-12;
 }
 
 .primary-btn {

@@ -10,6 +10,8 @@ import {
   CartesianGrid,
   Label,
 } from "recharts";
+import PageTitle from "../PageTitle";
+import { PiCurrencyCircleDollarBold } from "react-icons/pi";
 
 const CustomTooltip = ({ active, payload }: any) => {
   if (active && payload && payload.length) {
@@ -32,25 +34,21 @@ const CryptoChart = ({ sparkline }: { sparkline: number[][] }) => {
   }));
 
   return (
-    <div className="w-full h-[500px] mt-8 rounded-2xl bg-white">
-      <h2 className="text-xl font-semibold mb-4 text-gray-800">
-        Tendance des prix sur 7 jours
-      </h2>
+    <div className="w-full h-[500px] mt-12 mb-10 rounded-2xl bg-white">
+      <PageTitle
+        title="Tendance des prix"
+        icon={<PiCurrencyCircleDollarBold className="w-5 h-5" />}
+      />
 
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" height="100%" className="mt-6">
         <LineChart data={formattedData}>
           <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
-          <XAxis dataKey="time" tick={{ fontSize: 12 }} stroke="#6b7280">
-            <Label value="Temps (index)" offset={-5} position="insideBottom" />
-          </XAxis>
-          <YAxis tick={{ fontSize: 12 }} stroke="#6b7280">
-            <Label
-              value="Prix ($)"
-              angle={-90}
-              position="insideLeft"
-              style={{ textAnchor: "middle" }}
-            />
-          </YAxis>
+          <XAxis
+            dataKey="time"
+            tick={{ fontSize: 12 }}
+            stroke="#6b7280"
+          ></XAxis>
+          <YAxis tick={{ fontSize: 12 }} stroke="#6b7280"></YAxis>
           <Tooltip content={<CustomTooltip />} />
           <Line
             type="monotone"
