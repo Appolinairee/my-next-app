@@ -92,7 +92,7 @@ export default function CryptoStatsClient() {
       </div>
       {loading && <ButtonLoading className="" />}
       {error && <p className="text-red-500">Erreur : {error}</p>}
-      {filteredData.length > 0 ? (
+      {filteredData.length > 0 && (
         <>
           <Table<Crypto>
             data={filteredData}
@@ -102,7 +102,9 @@ export default function CryptoStatsClient() {
 
           <CryptoChart sparkline={sparklineData} />
         </>
-      ) : (
+      )}
+
+      {!loading && filteredData.length == 0 && (
         <EmptySection text="Aucune crypto-monnaie trouvée." />
       )}
     </div>

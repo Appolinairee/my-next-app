@@ -53,7 +53,7 @@ export default function CountriesList() {
             value={selectedContinent}
             onChange={handleContinentChange}
             options={[
-              { value: "all", label: "Tous les continents" },
+              { value: "all", label: "Tous" },
               ...continents.map((c) => ({ value: c, label: c })),
             ]}
             placeholder="Sélectionner un continent"
